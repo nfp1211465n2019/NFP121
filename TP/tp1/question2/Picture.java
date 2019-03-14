@@ -109,8 +109,10 @@ public class Picture {
      * sunSset function
      */
     public void sunSet() {
+        if(terreEstFixe){
         sun.slowMoveVertical(300);
         draw();
+        }
     }   
 
 }

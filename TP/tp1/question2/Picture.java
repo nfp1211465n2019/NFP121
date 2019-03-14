@@ -22,7 +22,11 @@ public class Picture {
     private Circle sun;
 
     private Circle sun2;
-
+    
+    
+    
+    private boolean terreEstFixe;
+    private boolean soleilEstBleu;
     /**
      * Constructor for objects of class Picture
      */
@@ -65,6 +69,12 @@ public class Picture {
         sun2.moveVertical(10);
         sun2.changeSize(30);
         sun2.makeVisible();
+        
+        
+        terreEstFixe = true;
+        soleilEstBleu = false;
+        
+        sun.makeVisible();
     }
 
     /**
@@ -90,6 +100,8 @@ public class Picture {
             window.changeColor("black");
             roof.changeColor("green");
             sun.changeColor("yellow");
+            sun.changeColor("blue");
+            soleilEstBleu = true;
         }
     }
 
@@ -98,6 +110,7 @@ public class Picture {
      */
     public void sunSet() {
         sun.slowMoveVertical(300);
+        draw();
     }   
 
 }
